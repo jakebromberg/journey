@@ -24,30 +24,37 @@ import Combine
 
 class LocationManager: NSObject, ObservableObject {
     private let locationManager = CLLocationManager()
+    private var isTracking: Bool = false
     @Published var locations: [CLLocation] = []
 
     override init() {
         super.init()
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
     }
 
     func start() {
         locationManager.startMonitoringSignificantLocationChanges()
+        isTracking = true
     }
 
     func stop() {
         locationManager.stopMonitoringSignificantLocationChanges()
+        isTracking = false
     }
 
     func reset() {
         locations.removeAll()
+        isTracking = false
     }
 }
 
 extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        self.locations.append(contentsOf: locations)
+        if self.locations.isEmpty || isTracking || !self.locations.ranges(of: locations).isEmpty {
+            self.locations.append(contentsOf: locations)
+        }
     }
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
