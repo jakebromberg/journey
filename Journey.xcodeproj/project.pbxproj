@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		23979CAD2DBACFCC0040030E /* Journet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23979CAD2DBACFCC0040030E /* Journey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		23979CBE2DBAD0750040030E /* Exceptions for "Journey" folder in "Journey" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 23979CAC2DBACFCC0040030E /* Journey */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		23979CAF2DBACFCC0040030E /* Journet */ = {
+		23979CAF2DBACFCC0040030E /* Journey */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Journet;
+			exceptions = (
+				23979CBE2DBAD0750040030E /* Exceptions for "Journey" folder in "Journey" target */,
+			);
+			path = Journey;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +45,7 @@
 		23979CA42DBACFCC0040030E = {
 			isa = PBXGroup;
 			children = (
-				23979CAF2DBACFCC0040030E /* Journet */,
+				23979CAF2DBACFCC0040030E /* Journey */,
 				23979CAE2DBACFCC0040030E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +53,7 @@
 		23979CAE2DBACFCC0040030E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				23979CAD2DBACFCC0040030E /* Journet.app */,
+				23979CAD2DBACFCC0040030E /* Journey.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +61,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		23979CAC2DBACFCC0040030E /* Journet */ = {
+		23979CAC2DBACFCC0040030E /* Journey */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 23979CB82DBACFCD0040030E /* Build configuration list for PBXNativeTarget "Journet" */;
+			buildConfigurationList = 23979CB82DBACFCD0040030E /* Build configuration list for PBXNativeTarget "Journey" */;
 			buildPhases = (
 				23979CA92DBACFCC0040030E /* Sources */,
 				23979CAA2DBACFCC0040030E /* Frameworks */,
@@ -61,13 +74,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				23979CAF2DBACFCC0040030E /* Journet */,
+				23979CAF2DBACFCC0040030E /* Journey */,
 			);
-			name = Journet;
+			name = Journey;
 			packageProductDependencies = (
 			);
-			productName = Journet;
-			productReference = 23979CAD2DBACFCC0040030E /* Journet.app */;
+			productName = Journey;
+			productReference = 23979CAD2DBACFCC0040030E /* Journey.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +98,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 23979CA82DBACFCC0040030E /* Build configuration list for PBXProject "Journet" */;
+			buildConfigurationList = 23979CA82DBACFCC0040030E /* Build configuration list for PBXProject "Journey" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +112,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				23979CAC2DBACFCC0040030E /* Journet */,
+				23979CAC2DBACFCC0040030E /* Journey */,
 			);
 		};
 /* End PBXProject section */
@@ -256,6 +269,9 @@
 				DEVELOPMENT_TEAM = P8QACM85EZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Journey/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to track significant changes.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to track significant changes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -266,7 +282,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.wxyc.Journet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.funlandresearch.Journey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -284,6 +300,9 @@
 				DEVELOPMENT_TEAM = P8QACM85EZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Journey/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to track significant changes.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to track significant changes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -294,7 +313,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.wxyc.Journet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.funlandresearch.Journey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -305,7 +324,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		23979CA82DBACFCC0040030E /* Build configuration list for PBXProject "Journet" */ = {
+		23979CA82DBACFCC0040030E /* Build configuration list for PBXProject "Journey" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23979CB62DBACFCD0040030E /* Debug */,
@@ -314,7 +333,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23979CB82DBACFCD0040030E /* Build configuration list for PBXNativeTarget "Journet" */ = {
+		23979CB82DBACFCD0040030E /* Build configuration list for PBXNativeTarget "Journey" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23979CB92DBACFCD0040030E /* Debug */,
