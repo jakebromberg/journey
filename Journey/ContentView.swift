@@ -12,7 +12,10 @@ struct ContentView: View {
     @State private var isTracking = false
 
     var body: some View {
-        VStack {
+        ZStack(alignment: .top) {
+            MapView(locations: $locationManager.locations)
+                .edgesIgnoringSafeArea(.all)
+            
             HStack {
                 Button(action: {
                     if isTracking {
@@ -35,9 +38,11 @@ struct ContentView: View {
                 }
                 .padding()
             }
-
-            MapView(locations: $locationManager.locations)
-                .edgesIgnoringSafeArea(.all)
+            .frame(maxWidth: .infinity)
         }
     }
+}
+
+#Preview {
+    ContentView()
 }
