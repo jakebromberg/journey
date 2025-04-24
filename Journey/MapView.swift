@@ -20,6 +20,7 @@ struct MapView: UIViewRepresentable {
 
     func updateUIView(_ mapView: MKMapView, context: Context) {
         mapView.removeAnnotations(mapView.annotations)
+        
         let annotations = locations.map { location -> MKPointAnnotation in
             let annotation = MKPointAnnotation()
             annotation.coordinate = location.coordinate
@@ -29,13 +30,19 @@ struct MapView: UIViewRepresentable {
             annotation.title = formatter.string(from: location.timestamp)
             return annotation
         }
+        
         mapView.addAnnotations(annotations)
-        if let last = locations.last {
-            let region = MKCoordinateRegion(center: last.coordinate,
-                                            latitudinalMeters: 500,
-                                            longitudinalMeters: 500)
-            mapView.setRegion(region, animated: true)
+        
+        let coordinate = if let coordinate = locations.last?.coordinate {
+            coordinate
+        } else {
+            mapView.userLocation.coordinate
         }
+        
+        let region = MKCoordinateRegion(center: coordinate,
+                                        latitudinalMeters: 500,
+                                        longitudinalMeters: 500)
+        mapView.setRegion(region, animated: true)
     }
 
     func makeCoordinator() -> Coordinator {
